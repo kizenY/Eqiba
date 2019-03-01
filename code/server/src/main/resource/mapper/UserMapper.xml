@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kizen.eqiba.server.dao.mysql.SqlUserDao">
+
+    <select id="getUserByAccount" parameterType="java.lang.String" resultType="com.kizen.eqiba.server.entity.User">
+        select id,password from user where
+        username = #{account} or
+        email = #{account} or
+        phone_number = #{account};
+    </select>
+
+    <insert id="createUser" parameterType="com.kizen.eqiba.server.entity.User">
+        insert into user(username,password,create_time) values (#{user.username},#{user.password},#{user.createTime});
+    </insert>
+
+    <update id="update" parameterType="com.kizen.eqiba.server.entity.User">
+        update user set
+
+        <if test="user.loginTime != null">
+            login_time = #{user.loginTime}
+        </if>
+        <if test="user.logoutTime != null">
+            logout_time = #{user.logoutTime}
+        </if>
+
+        where id = #{user.id};
+    </update>
+
+</mapper>
