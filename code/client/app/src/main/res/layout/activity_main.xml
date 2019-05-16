@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:id="@+id/drawerLayout_main"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/main_layout_overall">
+
+        <FrameLayout android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:id="@+id/main_layout_frame"
+                     android:layout_above="@+id/linearLayout"
+        >
+        </FrameLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="@dimen/height_linearLayout_main"
+                      android:layout_alignParentBottom="true"
+                      android:orientation="horizontal"
+                      android:id="@+id/linearLayout">
+            <Button android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:text="@string/fragment_message"
+                    android:id="@+id/button_message_main"/>
+            <Button android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:text="@string/fragment_activity"
+                    android:id="@+id/button_activity_main"/>
+            <Button android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:text="@string/fragment_news"
+                    android:id="@+id/button_news_activity"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+    <android.support.design.widget.NavigationView
+            android:id="@+id/navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:elevation="5dp"
+            app:headerLayout="@layout/header_navigation"
+            app:menu="@menu/navigation"/>
+</android.support.v4.widget.DrawerLayout>

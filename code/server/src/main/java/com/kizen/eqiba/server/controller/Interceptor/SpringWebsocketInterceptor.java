@@ -21,9 +21,8 @@ public class SpringWebsocketInterceptor extends HttpSessionHandshakeInterceptor 
     public boolean beforeHandshake(ServerHttpRequest request, ServerHttpResponse response, WebSocketHandler wsHandler, Map<String, Object> attributes) throws Exception {
         System.out.println("握手");
         String sessionID = getSessionId(request);
-        if (!userService.requestConnecting(sessionID))
+        if (!userService.isValid(sessionID))
             return false;
-        attributes.put("sessionId",sessionID);
         return super.beforeHandshake(request, response, wsHandler, attributes);
 
     }

@@ -2,7 +2,6 @@ package com.kizen.eqiba.server.service;
 
 import com.kizen.eqiba.server.entity.User;
 import com.kizen.eqiba.server.entity.dto.EqibaResult;
-import org.springframework.web.socket.WebSocketSession;
 
 public interface UserService{
     /**
@@ -35,28 +34,5 @@ public interface UserService{
      */
     EqibaResult logout(String sessionId);
 
-    /**
-     *
-     * @param sessionId
-     * @return
-     */
-    boolean requestConnecting(String sessionId);
 
-    /**
-     * 保存用户的长连接
-     * @param socketSession
-     */
-    void establishedConnection(WebSocketSession socketSession);
-
-    /**
-     * 处理出现错误的长连接：多由用户直接终结程序造成
-     * @param socketSession
-     */
-    void handleConnectionError(WebSocketSession socketSession);
-
-    /**
-     * 处理被关闭的长连接，清除service对session的持有，使其被回收
-     * @param session
-     */
-    void handleConnectionClosed(WebSocketSession session);
 }

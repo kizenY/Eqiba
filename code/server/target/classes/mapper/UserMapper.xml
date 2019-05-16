@@ -3,7 +3,7 @@
 <mapper namespace="com.kizen.eqiba.server.dao.mysql.SqlUserDao">
 
     <select id="getUserByAccount" parameterType="java.lang.String" resultType="com.kizen.eqiba.server.entity.User">
-        select id,password from user where
+        select id,username,password,session_id from user where
         username = #{account} or
         email = #{account} or
         phone_number = #{account};
@@ -21,6 +21,9 @@
         </if>
         <if test="user.logoutTime != null">
             logout_time = #{user.logoutTime}
+        </if>
+        <if test="user.sessionId !=null">
+            ,session_id = #{user.sessionId}
         </if>
 
         where id = #{user.id};

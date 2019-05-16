@@ -49,23 +49,19 @@ public class HttpClient {
         return sessionID;
     }
 
-    private void register()
+    public void register(String account,String password)
     {
         String registerUrl = "http://localhost:8080/server_war/user/register";
         String sessionID = "";
         User user = new User();
-        user.username = "kizen";
-        user.password = "119554644";
-
+        user.username = account;
+        user.password = password;
         try {
-            sessionID =doPost(registerUrl, new ObjectMapper().writeValueAsString(user),sessionID);
-
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-        }catch (IOException e)
-        {
+            doPost(registerUrl, new ObjectMapper().writeValueAsString(user),sessionID);
+        } catch (IOException e) {
             e.printStackTrace();
         }
+
 
     }
 

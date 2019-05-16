@@ -32,7 +32,6 @@ public class ExceptionAdvice{
     @ExceptionHandler(value = NullParamterExcpetion.class)
     public EqibaResult handleNullPointerException(NullParamterExcpetion e)
     {
-        System.out.println("捕获异常！！");
         return new EqibaResult(CODE_FIRST+"02",e.getMessage()+"不能包含空的数据！请检查填写信息！",null);
     }
 

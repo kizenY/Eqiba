@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Enumeration;
 import java.util.Map;
+import java.util.logging.Logger;
 
 
 @Controller
@@ -24,11 +25,12 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+
     @RequestMapping(method = RequestMethod.POST,value = "register",produces = "application/json")
     @ResponseBody
     public EqibaResult register(@RequestBody User user)throws NullParamterExcpetion
     {
-
+        System.out.println(user.toString());
         registerFormat(user);
 
         return userService.register(user);
@@ -64,7 +66,7 @@ public class UserController {
 
     private void registerFormat(User user) throws NullParamterExcpetion,WrongParameterException
     {
-        String wrong = "注册失败";
+        String wrong = "注册失败！";
         if (user.username==null || user.password==null)
             throw new NullParamterExcpetion(wrong);
         if (user.username.length()==0 || user.password.length()==0)
@@ -73,7 +75,7 @@ public class UserController {
 
     private void loginFormat(String account,String password) throws NullParamterExcpetion
     {
-        String wrong = "登陆失败";
+        String wrong = "登陆失败！";
         if (account==null || password==null)
             throw new NullParamterExcpetion(wrong);
         if (account.length()==0 || password.length()==0)

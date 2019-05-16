@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">client</string>
+    <string name="fragment_message">消息</string>
+    <string name="fragment_activity">活动</string>
+    <string name="fragment_news">时闻</string>
+    <string name="description_icon_head">头像</string>
+    <string name="default_username">Kizen</string>
+
+    <!--login activity-->
+    <string name="hint_username">用户名/手机号/邮箱</string>
+    <string name="hint_password">密码</string>
+    <string name="button_login">登录</string>
+    <string name="button_register">注册</string>
+
+    <!--register activity-->
+    <string name="username_register">用户名</string>
+    <string name="verification">验证码</string>
+    <string name="repeat_password">确认密码</string>
+
+    <!--navigation view-->
+    <string name="homepage">个人主页</string>
+    <string name="interest">兴趣</string>
+    <string name="setting">设置</string>
+    <string name="logout">退出账号</string>
+
+    <!--chatting activity-->
+    <string name="send">发送</string>
+
+    <!-- activity -->
+    <string name="location_example">湖北工业大学西区操场</string>
+    <string name="status_ready">正在筹备</string>
+    <string name="status_running">正在进行</string>
+    <string name="status_closing">已经结束</string>
+    <string name="join">加入活动</string>
+    <string name="activity_content_example">
+        篮球，英文（basketball），起源于美国马萨诸塞州，是1891年12月21日由詹姆斯·奈史密斯创造，是奥运会核心比赛项目，是以手为中心的身体对抗性体育运动 [1] 。
+        1891年12月21日，由美国马萨诸塞州斯普林菲尔德基督教青年会训练学校（现译名为美国春田大学，Springfield College）体育教师詹姆士·奈史密斯发明 [2]
+        。1896年，篮球运动传入中国，并且2002年姚明以状元的身份入选NBA，开启了中国篮球新的狂潮。
+        1904年，圣路易斯奥运会上第1次进行了篮球表演赛。1936年，篮球在柏林奥运会中被列为正式比赛项目 [1] 。1992年，巴塞罗那奥运会开始，职业选手可以参加奥运会篮球比赛 [1-2] 。
+        主要的国际性篮球组织是成立于1932年总部设在瑞士日内瓦的国际篮球联合会（国际业余篮球联合会）。
+        当今世界篮球水平最高的联赛是美国篮球职业联盟（NBA）比赛。
+        代表中国的水平最高的联赛是中国职业篮球联赛（CBA）比赛。
+    </string>
+    <string name="activity_title">一起来打篮球吧！</string>
+
+    <!-- my activity -->
+    <string name="my_activity">我的活动</string>
+    <string name="my_activity_experience">活动经历</string>
+    <string name="activities_ready">未开始</string>
+    <string name="activities_running">正在进行</string>
+    <string name="activities_closed">已结束</string>
+
+    <!-- detail activity information-->
+    <string name="members">成员</string>
+    <string name="detail">详细信息</string>
+
+    <!-- experience activity-->
+    <string name="example_personal_epilogue">
+        经过一个月共计16场比赛的紧张角逐，XX大学2012“XX杯”研究生新生篮球联赛已正式落下帷幕。在此，衷心地感谢在赛事中付出辛苦劳动的运动员、教练员、裁判员，感谢学校及各院方领导、老师们对赛事进程的关注，感谢XX有限公司对赛事给予的大力支持！同时，对取得骄人战果的参赛队表示热烈的祝贺！
+        篮球运动是一个团队合作项目，讲究队员间的相互配合和团体协作。本届篮球联赛，为爱好篮球的同学们提供了一个很好的展现自我、相互交流的平台。赛场上，一条条优美的弧线，一个个强健的身姿，无不彰显着运动员们用美感与力量诠释的篮球魅力和精神。一项项精湛的战术，一次次完美的配合，无不展现着教练员和运动员用智慧与汗水抒写的篮球精髓和风尚！这就是篮球！瞬间的精彩，永恒的回忆！
+        凭借着文明的参赛观赛素质，团结互助的集体意识和健康向上的精神风貌，本届篮球联赛取得了圆满成功！相信从赛场上传递出来的顽强拼搏、勇往直前的精神，并不会随着比赛的结束而渐渐消退，反而，它将在开启同学们研究生生涯之际，鼓舞着他们勤奋刻苦地学习研究，推动着他们坚定不移地迈向下一站成功。
+    </string>
+    <string name="title_activity_album">AlbumActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+</resources>

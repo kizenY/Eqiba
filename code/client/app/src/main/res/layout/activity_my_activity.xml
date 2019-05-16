@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".view.activity.MyActivityActivity">
+<LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    <TextView android:layout_width="match_parent" android:layout_height="@dimen/height_plain_text"
+              android:textSize="@dimen/size_text_normal" android:text="@string/my_activity"
+              android:layout_marginLeft="8dp"
+              android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+              android:layout_marginRight="8dp" android:gravity="center_vertical"
+              android:layout_marginTop="8dp" android:id="@+id/textView2"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:text="@string/activities_ready" android:layout_marginTop="16dp"
+              android:layout_marginLeft="16dp"/>
+    <android.support.v7.widget.RecyclerView android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/ready_activity_list_my_activity"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginLeft="16dp"
+                                            android:layout_marginRight="8dp"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:text="@string/activities_running" android:layout_marginTop="8dp"
+              android:layout_marginLeft="16dp"/>
+    <android.support.v7.widget.RecyclerView android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/running_activity_list_my_activity"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginLeft="16dp"
+                                            android:layout_marginRight="8dp"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:text="@string/activities_closed" android:layout_marginTop="16dp"
+              android:layout_marginLeft="16dp"/>
+    <android.support.v7.widget.RecyclerView android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:id="@+id/closed_activity_list_my_activity"
+                                            android:layout_marginTop="8dp"
+                                            android:layout_marginLeft="16dp"
+                                            android:layout_marginRight="8dp"/>
+    <TextView
+            android:text="@string/my_activity_experience"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/size_text_normal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_plain_text"
+            android:id="@+id/textView3" android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+    />
+    <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:id="@+id/experience_activity_my_activity"
+            android:layout_marginTop="8dp"/>
+
+</LinearLayout>
+</ScrollView>

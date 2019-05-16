@@ -22,21 +22,6 @@ public interface RedisUserDao {
     boolean exist(String sessionId);
 
     /**
-     * 根据用户信息查询用户是否存在表群数据中
-     * @param user
-     * @return sessionId
-     */
-    String exist(User user);
-
-    /**
-     * 查询用户是否存在与表群中
-     * 若用户存在与伪登出表中，则更新其状态，将其加入在线用户表
-     * @param sessionId
-     * @return 用户是否存在
-     */
-    boolean existAndUpdate(String sessionId);
-
-    /**
      * 将用户添加到在线表中
      * @param sessionId
      * @param user
@@ -49,11 +34,5 @@ public interface RedisUserDao {
      * @return 被移出的用户信息
      */
     User remove(String sessionId);
-
-    /**
-     * 将用户数据从在线用户表转移到伪登录表
-     * @param sessionId
-     */
-    void transferToBreakTable(String sessionId);
 
 }

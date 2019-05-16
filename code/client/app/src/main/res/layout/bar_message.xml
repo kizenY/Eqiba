@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="@dimen/height_bar" >
+
+    <com.eqiba.kizen.client.view.CircleImageButton
+            android:layout_width="@dimen/radius_head_miniature"
+            android:layout_height="match_parent"
+            android:id="@+id/mine_button_bar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="3dp"
+            app:srcCompat="@drawable/ic_mine"/>
+    <TextView
+            android:text="@string/fragment_message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <ImageButton
+            android:layout_width="@dimen/height_bar"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:background="@color/transparent"
+            android:id="@+id/friend_button_bar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_friends"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintRight_toRightOf="parent"/>
+
+
+</android.support.constraint.ConstraintLayout>

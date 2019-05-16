@@ -14,23 +14,35 @@ public class User {
     public Timestamp createTime;
     public Timestamp loginTime;
     public Timestamp logoutTime;
+    public String sessionId;
 
 
     @Override
     public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", email='" + email + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", password='" + password + '\'' +
-                ", birthday=" + birthday +
-                ", sex='" + sex + '\'' +
-                ", create_time=" + createTime +
-                ", login_time=" + loginTime +
-                ", logout_time=" + logoutTime +
-                '}';
+        return "{\"User\":{"
+                + "\"id\":"
+                + id
+                + ",\"username\":\""
+                + username + '\"'
+                + ",\"email\":\""
+                + email + '\"'
+                + ",\"phoneNumber\":\""
+                + phoneNumber + '\"'
+                + ",\"password\":\""
+                + password + '\"'
+                + ",\"birthday\":\""
+                + birthday + '\"'
+                + ",\"sex\":\""
+                + sex + '\"'
+                + ",\"createTime\":\""
+                + createTime + '\"'
+                + ",\"loginTime\":\""
+                + loginTime + '\"'
+                + ",\"logoutTime\":\""
+                + logoutTime + '\"'
+                + ",\"sessionId\":\""
+                + sessionId + '\"'
+                + "}}";
+
     }
-
-
 }

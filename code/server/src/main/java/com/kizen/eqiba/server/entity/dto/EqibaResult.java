@@ -3,6 +3,7 @@ package com.kizen.eqiba.server.entity.dto;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.kizen.eqiba.server.entity.User;
 
 import java.io.IOException;
 import java.util.List;
@@ -32,11 +33,15 @@ public class EqibaResult<T> {
 
     public EqibaResult(String code, String message, List<T> data)
    {
-       this.code =code;
-       this.message =message;
+       this(code,message);
        this.data =data;
    }
 
+   public EqibaResult(String code,String message)
+   {
+       this.code =code;
+       this.message =message;
+   }
     @Override
     public String toString() {
         try {
